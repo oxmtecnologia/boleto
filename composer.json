@@ -1,5 +1,5 @@
 {
-  "name": "oxmtecnologia/boletosicredi",
+  "name": "oxmtecnologia/boleto",
   "description": "Gerador de Boleto Sicredi",
   "licence": "MIT",
   "type": "library",
