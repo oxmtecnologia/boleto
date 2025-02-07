@@ -293,12 +293,21 @@ class Boleto
 
     public function getFatorVencimento()
     {
-        $data = explode('/', $this->getDataVencimento()->format('d/m/Y'));
-        $ano = $data[2];
-        $mes = $data[1];
-        $dia = $data[0];
+        $vencimento = $this->getDataVencimento();
+        $base = new \DateTimeImmutable('1997-10-07');
+    
+        $diff = $base->diff($vencimento);
+        $dias = (int) $diff->format('%r%a'); // Ex.: se a data for antes de 07/10/1997, pode dar negativo
+ 
+        while ($dias > 9999) {
+           $dias -= 9000;
+        }
 
-        return abs((Data::dateToDays('1997', '10', '07')) - (Data::dateToDays($ano, $mes, $dia)));
+        if ($dias < 0) {
+           $dias = 0;
+        }
+
+        return $dias;
     }
 
     /**
