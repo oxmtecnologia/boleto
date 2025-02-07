@@ -13,7 +13,7 @@
   "require": {
     "php": "^7.2",
     "itbz/fpdf": "~1.7",
-    "mpdf/mpdf": "~5",    
+    "mpdf/mpdf": "~8",    
     "picqer/php-barcode-generator": "^2.4.0"
   },
   "require-dev": {
