@@ -12,7 +12,7 @@ class Sicredi extends BancoAbstract
     protected function init()
     {
         $this->setEspecie('R$');
-        $this->setEspecieDocumento('OS');
+        $this->setEspecieDocumento('DM');
         $this->setCodigo('748');
         $this->setDigitoVerificador('X');
         $this->setNome('Sicredi');

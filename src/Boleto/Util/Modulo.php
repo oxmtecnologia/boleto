@@ -40,7 +40,7 @@ class Modulo
             $soma += $parcial[$i];
             if ($fator == $base) {
                 // restaura fator de multiplicacao para 2
-                $fator = 1;
+                $fator = 2;
             }
             ++$fator;
         }
